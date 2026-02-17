@@ -43,7 +43,7 @@ bool audit_append(const std::string& base_dir, const std::string& json_line) {
   if (!chained.empty() && chained.back() == '}') {
     chained.pop_back();
     chained += ,\"prev_hash\":\" + prev + """;
-    chained += ","entry_hash":"" + sha256_hex(json_line + prev) + ""}";
+    chained += " ,\\"entry_hash\\":\\" + sha256_hex(json_line + prev) + ""}";
   } else {
     chained = "{"raw":" + json_line + ,\"prev_hash\":\" + prev + \",\"entry_hash\":\" + sha256_hex(json_line + prev) + ""}";
   }
