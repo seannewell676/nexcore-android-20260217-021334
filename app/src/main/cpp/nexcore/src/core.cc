@@ -200,8 +200,4 @@ std::string execute(const std::string& proposal_id, bool approved, const std::st
   return receipt;
 }
 
-std::string audit_tail(int max_entries, const std::string& base_dir) {
-  return nexcore::audit_tail(max_entries, base_dir);
-}
-
 }  // namespace nexcore
