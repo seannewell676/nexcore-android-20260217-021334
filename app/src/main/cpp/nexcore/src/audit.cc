@@ -42,10 +42,10 @@ bool audit_append(const std::string& base_dir, const std::string& json_line) {
   std::string chained = json_line;
   if (!chained.empty() && chained.back() == '}') {
     chained.pop_back();
-    chained += ","prev_hash":"" + prev + """;
+    chained += ,\"prev_hash\":\" + prev + """;
     chained += ","entry_hash":"" + sha256_hex(json_line + prev) + ""}";
   } else {
-    chained = "{"raw":" + json_line + ","prev_hash":"" + prev + "","entry_hash":"" + sha256_hex(json_line + prev) + ""}";
+    chained = "{"raw":" + json_line + ,\"prev_hash\":\" + prev + \",\"entry_hash\":\" + sha256_hex(json_line + prev) + ""}";
   }
 
   std::ofstream out(path, std::ios::app | std::ios::binary);
