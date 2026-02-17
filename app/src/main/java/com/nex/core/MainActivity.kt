@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             binding.outputText.text = resultJson
             lastSpoken = resultJson
 
-            lastProposalId = Regex("\"proposal_id\"\s*:\s*\"([^\"]+)\"")
+            lastProposalId = Regex("\\.proposal_id\\.\\.s*:\\.s*\\.([^\\.]+)\\.")
                 .find(resultJson)?.groupValues?.get(1)
         }
 
