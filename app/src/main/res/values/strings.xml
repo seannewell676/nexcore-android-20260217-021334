@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NexCore</string>
+    <string name="hint_input">Type to Nex…</string>
+    <string name="btn_propose">Propose</string>
+    <string name="btn_execute">Execute</string>
+    <string name="btn_speak">Speak</string>
+    <string name="label_output">Output</string>
+</resources>
